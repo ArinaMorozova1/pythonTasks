@@ -1,0 +1,502 @@
+Python 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+run('''
+input x, y;
+if x < y then
+  z = x;
+  x = y;
+  y = z
+end;
+
+while x > y do
+  x = x - y;
+  if x < y then
+    z = x;
+    x = y;
+    y = z
+  end
+end
+''', {})
+x = 100
+y = 85
+run('''
+input x, y;
+if x < y then
+  z = x;
+  x = y;
+  y = z
+end;
+
+while x > y do
+  x = x - y;
+  if x < y then
+    z = x;
+    x = y;
+    y = z
+  end
+end;
+print x, y
+''', {})
+x = 100
+y = 85
+5.0 5.0 
+run('''
+input x, y;
+if x < y then
+  z = x;
+  x = y;
+  y = z
+end;
+
+while x > y do
+  x = x - y;
+  if x < y then
+    z = x;
+    x = y;
+    y = z
+  end
+end;
+print x, y
+''', {})
+x = 24
+y = 30
+6.0 6.0 
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 1;
+y = 2
+''')
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 413, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 72, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 1;
+y = 2
+''')
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 417, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 114, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 72, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+''')
+KeyboardInterrupt
+compile_('''
+x = 1;
+y = 2
+''')
+Traceback (most recent call last):
+  File "<pyshell#29>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 423, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 120, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 99, in compile
+    print(make_indent(indent) + self.var + ' = ' + self.expr.compile)
+TypeError: can only concatenate str (not "method") to str
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 1;
+y = 2
+''')
+Traceback (most recent call last):
+  File "<pyshell#30>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 423, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 120, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 99, in compile
+    print(make_indent(indent) + self.var + ' = ' + self.expr.compile())
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 18, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 1;
+y = 2
+''')
+x = 1
+y = 2
+compile_('''
+x = 1;
+y = x
+''')
+x = 1
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 426, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 123, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 102, in compile
+    print(make_indent(indent) + self.var + ' = ' + self.expr.compile())
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 18, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 1;
+y = x
+''')
+x = 1
+y = x
+compile_('''
+x = 1;
+y = x + 1
+''')
+x = 1
+Traceback (most recent call last):
+  File "<pyshell#34>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 429, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 126, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 105, in compile
+    print(make_indent(indent) + self.var + ' = ' + self.expr.compile())
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 18, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 1;
+y = x + 1
+''')
+x = 1
+y = x+1
+compile_('''
+x = 2 * (2 + 2);
+y = 2 * 2 + 2
+''')
+x = 2*2+2
+y = 2*2+2
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = 2 * (2 + 2);
+y = 2 * 2 + 2
+''')
+x = (2 * (2 + 2))
+y = ((2 * 2) + 2)
+compile_('''
+x = a[1];
+y = 2 * 2 + 2
+''')
+x = (a [ 1)
+y = ((2 * 2) + 2)
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = a[1];
+y = 2 * 2 + 2
+''')
+     
+Traceback (most recent call last):
+  File "<pyshell#41>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 434, in compile_
+    tree = p.parse()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 245, in parse
+    tree = self.parse_Program()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 251, in parse_Program
+    statement = self.parse_Statement()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 264, in parse_Statement
+    result = self.parse_Assign()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 288, in parse_Assign
+    expr = self.parse_Expr()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 353, in parse_Expr
+    result = self.parse_Term()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 373, in parse_Term
+    result = self.parse_Factor()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 390, in parse_Factor
+    base = self.parse_Base()
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 413, in parse_Base
+    result = BinOpExpr(result, '[', index)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 22, in __init__
+    assert self.op in ('+', '-', '*', '/', '[', '**', '<', '=', '>')
+AttributeError: 'BinOpExpr' object has no attribute 'op'
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+x = a[1];
+y = 2 * 2 + 2
+''')
+x = a[1]
+y = ((2 * 2) + 2)
+compile_('''
+if x > 0 then
+  x = 3
+end
+''')
+Traceback (most recent call last):
+  File "<pyshell#48>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 435, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 132, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 84, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+if x > 0 then
+  x = 3
+end
+''')
+if (x > 0):
+    x = 3
+else:
+    pass
+compile_('''
+if x > 0 then
+  x = 3
+else
+  u = 8;
+  x = 4
+end
+''')
+if (x > 0):
+    x = 3
+else:
+    u = 8
+    x = 4
+compile_('''
+if x > 0 then
+  x = 3
+else
+  u = 8;
+  x = 4;
+  if y < x then
+    x = y
+  end;
+  p = p + 1
+end
+''')
+if (x > 0):
+    x = 3
+else:
+    u = 8
+    x = 4
+    if (y < x):
+        x = y
+    else:
+        pass
+    p = (p + 1)
+compile_('''
+print x + 1, y = 2
+''')
+ОШИБКА 17 Ожидался EOF, получен =
+compile_('''
+print x + 1, y - 2
+''')
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 444, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 133, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 84, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+print x + 1, y - 2
+''')
+print((x + 1), (y - 2))
+compile_('''
+if x > 0 then
+  print 1;
+  print 2
+else
+  print 3
+end
+''')
+
+
+''')
+KeyboardInterrupt
+compile_('''
+if x > 0 then
+  print 1;
+  print 2
+else
+  print 3
+end
+''')
+if (x > 0):
+    print(1)
+    print(2)
+else:
+    print(3)
+compile_('''
+if x > 0 then
+  print 1;
+  print 2
+else
+  print 3, 4
+end
+''')
+if (x > 0):
+    print(1)
+    print(2)
+else:
+    print(3, 4)
+compile_('''
+input x, y;
+print x + y
+''')
+Traceback (most recent call last):
+  File "<pyshell#60>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 447, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 136, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 84, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+run('''
+input x, y;
+print x + y
+''', {})
+x = 10
+y = 20
+30.0 
+run('''
+input x, y;
+print x + y
+''', {})
+x = 1413423
+y = 1
+1413424.0 
+run('''
+input x, y;
+print x + y
+''', {})
+x = sasfasdf
+y = 1
+1.0 
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+input x, y;
+print x + y
+''')
+x = float(input('x'))
+y = float(input('y'))
+print((x + y))
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+input x, y;
+print x + y
+''')
+x = float(input('x = '))
+y = float(input('y = '))
+print((x + y))
+compile_('''
+input x, y;
+if x < y then
+  z = x;
+  x = y;
+  y = z
+end;
+
+while x > y do
+  x = x - y;
+  if x < y then
+    z = x;
+    x = y;
+    y = z
+  end
+end;
+print x, y
+''')
+x = float(input('x = '))
+y = float(input('y = '))
+if (x < y):
+    z = x
+    x = y
+    y = z
+else:
+    pass
+Traceback (most recent call last):
+  File "<pyshell#69>", line 1, in <module>
+    compile_('''
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 454, in compile_
+    tree.compile(0)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 143, in compile
+    stmt.compile(indent)
+  File "F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py", line 84, in compile
+    raise NotImplementedError()
+NotImplementedError
+
+=== RESTART: F:\Факультатив\11-05-2023-абстрактные_синтаксические_деревья.py ===
+compile_('''
+input x, y;
+if x < y then
+  z = x;
+  x = y;
+  y = z
+end;
+
+while x > y do
+  x = x - y;
+  if x < y then
+    z = x;
+    x = y;
+    y = z
+  end
+end;
+print x, y
+''')
+x = float(input('x = '))
+y = float(input('y = '))
+if (x < y):
+    z = x
+    x = y
+    y = z
+else:
+    pass
+while (x > y):
+    x = (x - y)
+    if (x < y):
+        z = x
+        x = y
+        y = z
+    else:
+        pass
+print(x, y)
